@@ -36,29 +36,28 @@ int main() {
 	/// 受け皿変数
 	int payStyle{};
 	int workTime{};
-	int pay{};
+	int normalPay{};
+	int recurPay{};
 	int isContinue = 0;
 
 	while (isContinue < 1) {
 
 		/// 開始
-		std::cout << "/// ==================== Pay Calculator ===================== //" << std::endl;
-
-		/// 給料の計算方法を選択
-		std::cout << "Choose your Pay style: (0: Normal, 1: Recursion )" << std::endl;
-		std::cin >> payStyle;
+		std::cout << "/// ============== Pay comparator ============== //" << std::endl;
 
 		/// 働く時間を入力
-		std::cout << "Please enter your workTime:" << std::endl;
+		std::cout << "Please enter workTime:" << std::endl;
 		std::cin >> workTime;
 
 		/// 給料計算
-		if (payStyle == 0) pay = NormalPayCalc(workTime);
-		else pay = RecurPayCalc(workTime);
+		normalPay = NormalPayCalc(workTime);
+		recurPay = RecurPayCalc(workTime);
 
 		/// 結果表示
 		std::cout << "/// ======================== Result ========================= //" << std::endl;
-		std::cout << "\nYour Pay is: " << pay << "\n" << std::endl;
+		std::cout << "Normal Pay for " << workTime << " hours is: " << normalPay << std::endl;
+		std::cout << "Recur Pay for " << workTime << " hours is: " << recurPay << std::endl;
+		std::cout << ((normalPay < recurPay) ? "Recur Pay is higher." : "Normal Pay is higher.") << std::endl;
 
 		/// 続行確認
 		std::cout << "/// ========================= Result ======================== //" << std::endl;

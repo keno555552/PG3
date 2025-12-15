@@ -21,9 +21,9 @@ int main() {
 		int i = 10;
 		int j = 20;
 
-		std::cout << "int i is " << i << std::endl;
-		std::cout << "int j is " << j << std::endl;
-		std::cout << "Lesser value is " << Compare(i, j) << "\n" << std::endl;
+		printf("int i is %d\n", i);
+		printf("int j is %d\n", j);
+		printf("Lesser value is %d\n\n", Compare(i, j));
 	}
 
 	/// floatŒ^‚Ì”äŠr
@@ -31,9 +31,9 @@ int main() {
 		float i = 10.0f;
 		float j = 20.0f;
 
-		std::cout << "float i is " << std::fixed << std::setprecision(1) << i << "f" << std::endl;
-		std::cout << "float j is " << std::fixed << std::setprecision(1) << j << "f" << std::endl;
-		std::cout << "Lesser value is " << std::fixed << std::setprecision(1) << Compare(i, j) << "f" << "\n" << std::endl;
+		printf("float i is %.1f\n", i);
+		printf("float j is %.1f\n", j);
+		printf("Lesser value is %.1f\n\n", Compare(i, j));
 	}
 
 	/// doubleŒ^‚Ì”äŠr
@@ -41,9 +41,9 @@ int main() {
 		double i = 10.0;
 		double j = 20.0;
 
-		std::cout << "double i is " << std::fixed << std::setprecision(6) << i << std::endl;
-		std::cout << "double j is " << std::fixed << std::setprecision(6) << j << std::endl;
-		std::cout << "Lesser value is " << std::fixed << std::setprecision(6) << Compare(i, j) << "\n" << std::endl;
+		printf("double i is %lf\n", i);
+		printf("double j is %lf\n", j);
+		printf("Lesser value is %lf\n\n", Compare(i, j));
 	}
 
 

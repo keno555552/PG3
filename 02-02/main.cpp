@@ -35,7 +35,7 @@ int main() {
 
 	/// 受け皿変数
 	int payStyle{};
-	int workTime{};
+	int workTimeInt{};
 	int normalPay{};
 	int recurPay{};
 	int isContinue = 0;
@@ -43,29 +43,29 @@ int main() {
 	while (isContinue < 1) {
 
 		/// 開始
-		std::cout << "/// ============== Pay comparator ============== //" << std::endl;
+		printf("/// ============== Pay comparator ============== //\n");
 
 		/// 働く時間を入力
-		std::cout << "Please enter workTime:" << std::endl;
-		std::cin >> workTime;
+		printf("Please enter workTime:\n");
+		scanf_s("%d", &workTimeInt);
 
 		/// 給料計算
-		normalPay = NormalPayCalc(workTime);
-		recurPay = RecurPayCalc(workTime);
+		normalPay = NormalPayCalc(workTimeInt);
+		recurPay = RecurPayCalc(workTimeInt);
 
 		/// 結果表示
-		std::cout << "/// ======================== Result ========================= //" << std::endl;
-		std::cout << "Normal Pay for " << workTime << " hours is: " << normalPay << std::endl;
-		std::cout << "Recur Pay for " << workTime << " hours is: " << recurPay << std::endl;
-		std::cout << ((normalPay < recurPay) ? "Recur Pay is higher." : "Normal Pay is higher.") << std::endl;
+		printf("/// ======================== Result ========================= //\n");
+		printf("Normal Pay for %d hours is: %d\n", workTimeInt, normalPay);
+		printf("Recur Pay for %d hours is: %d\n", workTimeInt, recurPay);
+		printf((normalPay < recurPay) ? "Recur Pay is higher.\n" : "Normal Pay is higher.\n");
 
 		/// 続行確認
-		std::cout << "/// ========================= Result ======================== //" << std::endl;
-		std::cout << "Do you want to continue? (0: Yes, 1: No )" << std::endl;
+		printf("/// ========================= Result ======================== //\n");
+		printf("Do you want to continue? (0: Yes, 1: No )\n");
 		std::cin >> isContinue;
 
-		std::cout << "/// === Thankyou for using our service, See you next time === //" << std::endl;
 
 	}
+	printf("/// === Thankyou for using our service, See you next time === //\n");
 	return 0;
 }

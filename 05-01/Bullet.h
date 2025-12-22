@@ -1,4 +1,4 @@
-ï»¿#pragma once
+#pragma once
 #include <Novice.h>
 
 class Bullet
@@ -15,20 +15,20 @@ public:
 	float GetPosY() { return posY_; }
 	float GetHitRadius() { return height_ / 2.0f; }
 
-	/// Bulletã®æœ‰åŠ¹ç„¡åŠ¹è¨­å®š
+	/// Bullet‚Ì—LŒø–³Œøİ’è
 	void SetIsActive(bool isActive) { isActive_ = isActive; }
 
 private:
-	/// åŸºæœ¬å¤‰æ•°
+	/// Šî–{•Ï”
 	float posX_;
 	float posY_;
 	float speed_ = 8;
 
-	/// å¤§ãã•
+	/// ‘å‚«‚³
 	float width_ = 12;
 	float height_ = 18;
 
-	/// æœ‰åŠ¹ç„¡åŠ¹
+	/// —LŒø–³Œø
 	bool isActive_ = true;
 };
 

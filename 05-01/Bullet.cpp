@@ -1,4 +1,4 @@
-﻿#include "Bullet.h"
+#include "Bullet.h"
 
 Bullet::Bullet(float posX, float posY) :
 	posX_(posX), 

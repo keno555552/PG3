@@ -11,8 +11,8 @@ public:
 	void AssignPressKeyD(ICommand* command);
 
 private:
-	ICommand* pressKeyA_{};
-	ICommand* pressKeyD_{};
+	ICommand* triggerKeyA_{};
+	ICommand* triggerKeyD_{};
 
 
 };

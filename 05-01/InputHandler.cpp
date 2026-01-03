@@ -1,20 +1,20 @@
 ﻿#include "InputHandler.h"
 
 void InputHandler::AssignPressKeyA(ICommand* command) {
-	this->pressKeyA_ = command;
+	this->triggerKeyA_ = command;
 }
 
 void InputHandler::AssignPressKeyD(ICommand* command) {
-	this->pressKeyD_ = command;
+	this->triggerKeyD_ = command;
 }
 
 
 ICommand* InputHandler::HandleInput() {
 	if (Novice::CheckHitKey(DIK_A)) {
-		return pressKeyA_;
+		return triggerKeyA_;
 	}
 	if (Novice::CheckHitKey(DIK_D)) {
-		return pressKeyD_;
+		return triggerKeyD_;
 	}
     return nullptr;
 }

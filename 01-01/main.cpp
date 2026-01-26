@@ -1,15 +1,17 @@
-﻿#include <iostream>
+#include <iostream>
 #include <stdio.h>
 #include <list>
+
+const int JK = 30;
 
 /// <summary>
 /// リストをprintfします
 /// </summary>
 /// <param name="stationList">StationList</param>
-void PrintStationList(std::list<std::string>& stationList) {
+void PrintStationList(std::list<const char*>& stationList) {
 	int i = 1;
 	for (auto& station : stationList) {
-		printf("JY%d %s\n", i, station.c_str());
+		printf("JY%d %s\n", i, station);
 		i++;
 	}
 }
@@ -21,7 +23,7 @@ void PrintStationList(std::list<std::string>& stationList) {
 /// <param name="stationList">目標リスト</param>
 /// <param name="targetStation">一個前の駅</param>
 /// <param name="inputStation">対象駅</param>
-void ImportStation(std::list<std::string>& stationList, std::string targetStation, std::string inputStation) {
+void ImportStation(std::list<const char*>& stationList, const char* targetStation, const char* inputStation) {
 	auto target = std::find_if(stationList.begin(),
 		stationList.end(),
 		[&](const std::string& station) {
@@ -35,7 +37,7 @@ void ImportStation(std::list<std::string>& stationList, std::string targetStatio
 	}
 }
 
-std::list<std::string> stationList{
+std::list<const char*> stationList{
 	"Tokyo",
 	"Kanda",
 	"Akihabara",
